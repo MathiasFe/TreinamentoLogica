@@ -1,0 +1,127 @@
+.container{
+  width: 100vw;
+ height: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerLoading{
+  width: 100vw;
+  height: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  border:1px solid var(--dark);
+  min-width: 30%;
+  min-height: 60%;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 5px 5px 8px 1px var(--dark);
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+@keyframes PingPong{
+  from{
+    top: 0;
+  }
+  to{
+   top:-0.3rem;
+  }
+}
+
+.card .loading__h2{
+    text-align: center;
+    font-family: var(--family);
+    font-size: 1.2rem;
+    color:var(--text);
+    font-weight: 600;
+}
+
+.card .loading__h2 span{
+  color:var(--title);
+  font-size: 1.5rem;
+  position:relative;
+}
+
+.card .loading__h2 span:nth-child(2){
+  animation:PingPong 400ms  alternate infinite;
+}
+
+.card .loading__h2 span:nth-child(3){
+  animation:PingPong 400ms 300ms alternate infinite;
+}
+
+.card .loading__h2 span:nth-child(4){
+  animation:PingPong 400ms 500ms alternate infinite;
+}
+
+.card .card__h1{
+  color:var(--text);
+  text-align: center;
+  font-family: var(--family);
+  font-size:1.5rem;
+  
+}
+
+.card form{
+  display: flex;
+  flex-direction: column;
+}
+
+.card form label{
+    line-height: 2rem;
+    font-size:0.8rem;
+    font-family: var(--family);
+    font-weight: 600;
+    color:var(--text);
+}
+
+.card form input{
+  font-size:0.9rem;
+    padding: 0.5rem;
+    border-radius:8px;
+    color:var(--text);
+}
+
+.card form button{
+  margin-top:1rem;
+  max-height: 3rem;
+  max-width: 10rem;
+  font-size: 0.9rem;
+  font-family: var(--family);
+  text-align: center;
+  transition:all 350ms linear;
+}
+
+.card form div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card form .form__button__alterar{
+  color:var(--blue);
+  border-color:var(--blue);
+}
+
+.card form .form__button__voltar{
+  color:var(--red);
+  border-color:var(--red);
+}
+
+.card form .form__button__alterar:hover{
+  background-color: var(--blue);
+  color:var(--white);
+  border-color:var(--blue);
+}
+
+.card form .form__button__voltar:hover{
+  background-color: var(--red);
+  border-color:var(--red);
+  color:var(--white);
+}

@@ -1,0 +1,188 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3,240px);
+  grid-template-rows:repeat(3,200px) ;
+  gap: 1rem;
+  position:relative;
+}
+
+
+.cells{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border:1px solid var(--gray-line);
+  border-radius:5px;
+  font-size:3rem;
+  cursor:pointer;
+
+}
+
+.cells:hover{
+  box-shadow: 0 4px 10px var(--title);
+}
+
+.cells[data-jogada="X"]{
+    background-color: var(--red);
+    color:rgba(0,0,0,0.4);
+    cursor:not-allowed;
+    transition:all 350ms ease-in-out;
+}
+
+.cells[data-jogada="O"]{
+  background-color: var(--blue-twitter);
+  color:rgba(0,0,0,0.4);
+  cursor:not-allowed;
+  transition:all 350ms ease-in-out;
+}
+
+.cells[data-jogada="X"]:hover{
+  box-shadow: none;
+}
+
+.cells[data-jogada="O"]:hover{
+box-shadow: none;
+}
+
+
+.painel{
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(242,243,245,0.9);
+}
+
+.painel > div h1{
+  font-family: 'Roboto Mono', monospace;
+  font-size:1.5rem;
+  color:var(--green);
+}
+
+
+.painel > div p{
+  font-family: 'Roboto Mono', monospace;
+  font-size:1.2rem;
+  color:var(--blue-twitter);
+}
+
+
+.painel > div .novoJogo{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  color:var(--blue-twitter);
+  border-color:var(--blue-twitter);
+  transition:all 350ms ease-in-out;
+}
+
+.painel > div .novoJogo:hover{
+  color:var(--white);
+  background:var(--green);
+  border-color:var(--green);
+}
+
+
+
+.containerPreGame{
+  width: 100vw;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items:center ;
+}
+
+.containerPreGame h1 {
+  font-family: 'Roboto Mono', monospace;
+  color:var(--title);
+  font-size:2rem;
+  font-weight: 600;
+  line-height: 0rem;
+}
+
+.containerPreGame p{
+  font-family: 'Roboto Mono', monospace;
+  color:var(--text);
+  font-size:1.1rem;
+  line-height: 1rem;
+}
+
+.containerPreGame button{
+      margin-left: 0.5rem;
+}
+
+.containerPreGame .optionX{
+  background-color:transparent;
+  color:var(--red);
+  border-color:var(--red);
+}
+
+.containerPreGame .optionO{
+  background-color:transparent;
+  color:var(--blue-twitter);
+  border-color:var(--blue-twitter);
+}
+
+.containerPreGame .optionX:hover{
+  background-color:var(--red);
+  color:var(--white);
+  border-color:var(--red);
+  transition:all 350ms ease-in-out;
+}
+
+.containerPreGame .optionO:hover{
+  background-color:var(--blue-twitter);
+  color:var(--white);
+  border-color:var(--blue-twitter);
+  transition:all 350ms ease-in-out;
+}
+
+.containerPreGame p .spanX{
+    color:var(--red);
+}
+
+.containerPreGame p .spanO{
+  color:var(--blue-twitter)
+}
+
+.containerPreGame .startGame{
+    font-family: 'Roboto Mono', monospace;
+    font-size:1.2rem;
+    font-weight: 400;
+    border-color:var(--green);
+    color:var(--green);
+    transition:all 300ms ease-in-out;
+}
+
+.containerPreGame .startGame:hover{
+    background-color: var(--green);
+    color:var(--white);
+}
+
+.containerPreGame .cancelGame{
+  font-family: 'Roboto Mono', monospace;
+  font-size:1.1rem;
+  font-weight: 400;
+  border-color:var(--red);
+  color:var(--red);
+  margin-top: 1rem;
+  transition:all 300ms ease-in-out;
+}
+
+.containerPreGame .cancelGame:hover{
+  border-color:var(--red);
+  color:var(--white);
+  background-color: var(--red);
+}

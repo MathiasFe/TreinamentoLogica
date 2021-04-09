@@ -1,0 +1,124 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 100vw;
+    height: 88vh;
+}
+ .card{
+    border: 1px solid var(--gray-line);
+    border-radius: 10px;
+    box-shadow: 0 0 6px var(--dark);
+    padding: 1em;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+ }
+
+
+ .card h1{
+  font-weight: 400;
+  font: 1.8rem 'Roboto Mono', monospace;
+  color:var(--text)
+ }
+
+.card  label{
+  font: 0.85rem 'Roboto Mono', monospace;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color:var(--text)
+}
+
+.card input{
+    padding: 0.3rem;
+    font-size:0.8rem;
+    border-radius:5px;
+    color:var(--text);
+    transition: all 350ms ease-in-out;
+}
+
+.card input:focus{
+  box-shadow: 0 0 12px var(--blue-dark);
+  border:1px;
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  border-radius:5px;
+}
+.card p{
+  font: 0.85rem 'Roboto Mono', monospace;
+  line-height: 1.5rem;
+  font-weight: 600;
+  color:(--title);
+}
+
+.card  span{
+  font: 0.85rem 'Roboto Mono', monospace;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color:var(--text);
+
+}
+
+  .card .button{
+    max-width: 7.5rem;
+    max-height: 5.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background:var(--blue);
+    color:var(--white);
+    border-color: var(--blue);
+    transition:all 350ms ease-in-out;
+    }
+  
+    .card .button:hover{
+      background-color:transparent;
+      color:var(--blue);
+      border-color:var(--blue);
+    }
+
+    .card .back{
+      max-width: 7.5rem;
+      max-height: 5.5rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      background:var(--red);
+      color:var(--white);
+      border-color: var(--red);
+      transition:all 350ms ease-in-out;
+      }
+    
+      .card .back:hover{
+        background-color:transparent;
+        color:var(--red);
+        border-color:var(--red);
+      }
+
+    .card .error{
+          color:var(--error-text);
+          background-color: var(--error-background);
+          border-color:var(--error-line);
+          padding:0.4rem;
+          font-family:'Roboto Mono', monospace;
+          font-size:0.8rem;
+          box-sizing: border-box;
+          border-radius:5px;
+    }
+
+    .card hr{
+      background-color: var(--gray-line);
+      height: 0.1rem;
+      width: 100%;
+      margin-top: -0.2rem;
+      margin-bottom:1rem;
+    }
+
+    @media (max-width: 790px) {
+        .card h1{
+          font: 1.2rem 'Roboto Mono', monospace;
+        }
+    }
